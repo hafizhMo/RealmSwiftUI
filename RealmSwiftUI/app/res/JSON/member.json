@@ -1,0 +1,61 @@
+[
+  {
+    "id": 1,
+    "stage_name": "Soyeon",
+    "birth_name": "Jeon So Yeon",
+    "birthday": "August 26, 1998",
+    "positions": [
+      "Leader",
+      "Main Rapper",
+      "Sub Vocalist",
+      "Center"
+    ],
+    "zodiac_sign": "Virgo"
+  },
+  {
+    "id": 2,
+    "stage_name": "Miyeon",
+    "birth_name": "Cho Mi Yeon",
+    "birthday": "January 31, 1997",
+    "positions": [
+      "Main Vocalist",
+      "Visual"
+    ],
+    "zodiac_sign": "Aquarius"
+  },
+  {
+    "id": 3,
+    "stage_name": "Minnie",
+    "birth_name": "Nicha Yontararak",
+    "birthday": "October 23, 1997",
+    "positions": [
+      "Main Vocalist"
+    ],
+    "zodiac_sign": "Libra-Scorpio Cusp"
+  },
+  {
+    "id": 4,
+    "stage_name": "Yuqi",
+    "birth_name": "Song Yu Qi",
+    "birthday": "September 23, 1999",
+    "positions": [
+      "Lead Dancer",
+      "Sub Vocalist",
+      "Sub Rapper",
+      "Face of the Group"
+    ],
+    "zodiac_sign": "Libra"
+  },
+  {
+    "id": 5,
+    "stage_name": "Shuhua",
+    "birth_name": "Yeh Shuhua",
+    "birthday": "January 6, 2000",
+    "positions": [
+      "Sub Vocalist",
+      "Visual",
+      "Maknae"
+    ],
+    "zodiac_sign": "Capricorn"
+  },
+]

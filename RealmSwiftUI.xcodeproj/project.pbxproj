@@ -8,24 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		FBD4B0DB29B71A6900E4A230 /* RealmSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B0DA29B71A6900E4A230 /* RealmSwiftUIApp.swift */; };
-		FBD4B0DD29B71A6900E4A230 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B0DC29B71A6900E4A230 /* ContentView.swift */; };
 		FBD4B0DF29B71A6A00E4A230 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBD4B0DE29B71A6A00E4A230 /* Assets.xcassets */; };
 		FBD4B0E229B71A6A00E4A230 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBD4B0E129B71A6A00E4A230 /* Preview Assets.xcassets */; };
 		FBD4B0EA29B71D3300E4A230 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FBD4B0E929B71D3300E4A230 /* RealmSwift */; };
-		FBD4B0ED29B7228A00E4A230 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B0EC29B7228A00E4A230 /* Group.swift */; };
-		FBD4B0EF29B7229600E4A230 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B0EE29B7229600E4A230 /* Item.swift */; };
-		FBD4B0F129B7281E00E4A230 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B0F029B7281E00E4A230 /* DetailView.swift */; };
+		FBD4B0F429B7787000E4A230 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B0F329B7787000E4A230 /* AppAssembler.swift */; };
+		FBD4B0F629B778AF00E4A230 /* MemberAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B0F529B778AF00E4A230 /* MemberAssembler.swift */; };
+		FBD4B10A29B77B4600E4A230 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B10929B77B4600E4A230 /* Member.swift */; };
+		FBD4B10C29B77C3E00E4A230 /* MemberEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B10B29B77C3E00E4A230 /* MemberEntity.swift */; };
+		FBD4B10E29B77DDF00E4A230 /* MemberLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B10D29B77DDF00E4A230 /* MemberLocalDataSource.swift */; };
+		FBD4B11129B77EFE00E4A230 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B11029B77EFE00E4A230 /* DataProvider.swift */; };
+		FBD4B11329B77F4B00E4A230 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B11229B77F4B00E4A230 /* JSONLoader.swift */; };
+		FBD4B11529B7803300E4A230 /* DefaultMemberRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B11429B7803300E4A230 /* DefaultMemberRepository.swift */; };
+		FBD4B11729B7805600E4A230 /* MemberRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B11629B7805600E4A230 /* MemberRepository.swift */; };
+		FBD4B11929B7815600E4A230 /* MemberUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B11829B7815600E4A230 /* MemberUseCase.swift */; };
+		FBD4B11B29B782A500E4A230 /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B11A29B782A500E4A230 /* MainAssembler.swift */; };
+		FBD4B11D29B7837400E4A230 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B11C29B7837400E4A230 /* CustomError.swift */; };
+		FBD4B12329B7851100E4A230 /* MemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B12229B7851100E4A230 /* MemberViewModel.swift */; };
+		FBD4B12529B7857600E4A230 /* MemberScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B12429B7857600E4A230 /* MemberScreen.swift */; };
+		FBD4B12729B785F500E4A230 /* MemberRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B12629B785F500E4A230 /* MemberRouter.swift */; };
+		FBD4B12A29B7873B00E4A230 /* member.json in Resources */ = {isa = PBXBuildFile; fileRef = FBD4B12929B7873B00E4A230 /* member.json */; };
+		FBD4B12D29B78B0C00E4A230 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B12C29B78B0C00E4A230 /* ViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FBD4B0D729B71A6900E4A230 /* RealmSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBD4B0DA29B71A6900E4A230 /* RealmSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSwiftUIApp.swift; sourceTree = "<group>"; };
-		FBD4B0DC29B71A6900E4A230 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FBD4B0DE29B71A6A00E4A230 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBD4B0E129B71A6A00E4A230 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		FBD4B0EC29B7228A00E4A230 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
-		FBD4B0EE29B7229600E4A230 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		FBD4B0F029B7281E00E4A230 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		FBD4B0F329B7787000E4A230 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
+		FBD4B0F529B778AF00E4A230 /* MemberAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAssembler.swift; sourceTree = "<group>"; };
+		FBD4B10929B77B4600E4A230 /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		FBD4B10B29B77C3E00E4A230 /* MemberEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberEntity.swift; sourceTree = "<group>"; };
+		FBD4B10D29B77DDF00E4A230 /* MemberLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberLocalDataSource.swift; sourceTree = "<group>"; };
+		FBD4B11029B77EFE00E4A230 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		FBD4B11229B77F4B00E4A230 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
+		FBD4B11429B7803300E4A230 /* DefaultMemberRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMemberRepository.swift; sourceTree = "<group>"; };
+		FBD4B11629B7805600E4A230 /* MemberRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRepository.swift; sourceTree = "<group>"; };
+		FBD4B11829B7815600E4A230 /* MemberUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberUseCase.swift; sourceTree = "<group>"; };
+		FBD4B11A29B782A500E4A230 /* MainAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
+		FBD4B11C29B7837400E4A230 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		FBD4B12229B7851100E4A230 /* MemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewModel.swift; sourceTree = "<group>"; };
+		FBD4B12429B7857600E4A230 /* MemberScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberScreen.swift; sourceTree = "<group>"; };
+		FBD4B12629B785F500E4A230 /* MemberRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRouter.swift; sourceTree = "<group>"; };
+		FBD4B12929B7873B00E4A230 /* member.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = member.json; sourceTree = "<group>"; };
+		FBD4B12C29B78B0C00E4A230 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +85,10 @@
 		FBD4B0D929B71A6900E4A230 /* RealmSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				FBD4B0EB29B7227300E4A230 /* Models */,
-				FBD4B0DA29B71A6900E4A230 /* RealmSwiftUIApp.swift */,
-				FBD4B0DC29B71A6900E4A230 /* ContentView.swift */,
-				FBD4B0DE29B71A6A00E4A230 /* Assets.xcassets */,
+				FBD4B0F829B7795500E4A230 /* app */,
+				FBD4B0FC29B77A4800E4A230 /* core */,
+				FBD4B0F229B7785800E4A230 /* di */,
 				FBD4B0E029B71A6A00E4A230 /* Preview Content */,
-				FBD4B0F029B7281E00E4A230 /* DetailView.swift */,
 			);
 			path = RealmSwiftUI;
 			sourceTree = "<group>";
@@ -77,13 +101,204 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		FBD4B0EB29B7227300E4A230 /* Models */ = {
+		FBD4B0F229B7785800E4A230 /* di */ = {
 			isa = PBXGroup;
 			children = (
-				FBD4B0EC29B7228A00E4A230 /* Group.swift */,
-				FBD4B0EE29B7229600E4A230 /* Item.swift */,
+				FBD4B0F329B7787000E4A230 /* AppAssembler.swift */,
+				FBD4B0F729B778F000E4A230 /* Features */,
 			);
-			path = Models;
+			path = di;
+			sourceTree = "<group>";
+		};
+		FBD4B0F729B778F000E4A230 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B11A29B782A500E4A230 /* MainAssembler.swift */,
+				FBD4B0F529B778AF00E4A230 /* MemberAssembler.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		FBD4B0F829B7795500E4A230 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B0FA29B779BB00E4A230 /* features */,
+				FBD4B0FB29B779C000E4A230 /* main */,
+				FBD4B0F929B7796C00E4A230 /* res */,
+				FBD4B12B29B78AFF00E4A230 /* utils */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		FBD4B0F929B7796C00E4A230 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B12829B7872E00E4A230 /* JSON */,
+				FBD4B0DE29B71A6A00E4A230 /* Assets.xcassets */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		FBD4B0FA29B779BB00E4A230 /* features */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B0FE29B77A6500E4A230 /* member */,
+			);
+			path = features;
+			sourceTree = "<group>";
+		};
+		FBD4B0FB29B779C000E4A230 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B0DA29B71A6900E4A230 /* RealmSwiftUIApp.swift */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		FBD4B0FC29B77A4800E4A230 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B0FF29B77ADC00E4A230 /* data */,
+				FBD4B10029B77AE000E4A230 /* domain */,
+				FBD4B10F29B77EED00E4A230 /* utils */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		FBD4B0FE29B77A6500E4A230 /* member */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B11E29B784A000E4A230 /* router */,
+				FBD4B11F29B784A600E4A230 /* screen */,
+				FBD4B12129B784B100E4A230 /* viewmodel */,
+				FBD4B12029B784AC00E4A230 /* views */,
+			);
+			path = member;
+			sourceTree = "<group>";
+		};
+		FBD4B0FF29B77ADC00E4A230 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B10129B77AF400E4A230 /* entity */,
+				FBD4B10229B77B0700E4A230 /* local */,
+				FBD4B10329B77B0B00E4A230 /* repository */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		FBD4B10029B77AE000E4A230 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B10429B77B2100E4A230 /* model */,
+				FBD4B10529B77B2500E4A230 /* repository */,
+				FBD4B10629B77B2B00E4A230 /* usecase */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		FBD4B10129B77AF400E4A230 /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B10B29B77C3E00E4A230 /* MemberEntity.swift */,
+			);
+			path = entity;
+			sourceTree = "<group>";
+		};
+		FBD4B10229B77B0700E4A230 /* local */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B10D29B77DDF00E4A230 /* MemberLocalDataSource.swift */,
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
+		FBD4B10329B77B0B00E4A230 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B11429B7803300E4A230 /* DefaultMemberRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		FBD4B10429B77B2100E4A230 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B10929B77B4600E4A230 /* Member.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		FBD4B10529B77B2500E4A230 /* repository */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B11629B7805600E4A230 /* MemberRepository.swift */,
+			);
+			path = repository;
+			sourceTree = "<group>";
+		};
+		FBD4B10629B77B2B00E4A230 /* usecase */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B11829B7815600E4A230 /* MemberUseCase.swift */,
+			);
+			path = usecase;
+			sourceTree = "<group>";
+		};
+		FBD4B10F29B77EED00E4A230 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B11C29B7837400E4A230 /* CustomError.swift */,
+				FBD4B11029B77EFE00E4A230 /* DataProvider.swift */,
+				FBD4B11229B77F4B00E4A230 /* JSONLoader.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		FBD4B11E29B784A000E4A230 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B12629B785F500E4A230 /* MemberRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		FBD4B11F29B784A600E4A230 /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B12429B7857600E4A230 /* MemberScreen.swift */,
+			);
+			path = screen;
+			sourceTree = "<group>";
+		};
+		FBD4B12029B784AC00E4A230 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		FBD4B12129B784B100E4A230 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B12229B7851100E4A230 /* MemberViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		FBD4B12829B7872E00E4A230 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B12929B7873B00E4A230 /* member.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		FBD4B12B29B78AFF00E4A230 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B12C29B78B0C00E4A230 /* ViewState.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +367,7 @@
 			files = (
 				FBD4B0E229B71A6A00E4A230 /* Preview Assets.xcassets in Resources */,
 				FBD4B0DF29B71A6A00E4A230 /* Assets.xcassets in Resources */,
+				FBD4B12A29B7873B00E4A230 /* member.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,11 +378,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBD4B0EF29B7229600E4A230 /* Item.swift in Sources */,
-				FBD4B0ED29B7228A00E4A230 /* Group.swift in Sources */,
-				FBD4B0DD29B71A6900E4A230 /* ContentView.swift in Sources */,
-				FBD4B0F129B7281E00E4A230 /* DetailView.swift in Sources */,
+				FBD4B10E29B77DDF00E4A230 /* MemberLocalDataSource.swift in Sources */,
+				FBD4B11929B7815600E4A230 /* MemberUseCase.swift in Sources */,
+				FBD4B12529B7857600E4A230 /* MemberScreen.swift in Sources */,
+				FBD4B12329B7851100E4A230 /* MemberViewModel.swift in Sources */,
+				FBD4B11D29B7837400E4A230 /* CustomError.swift in Sources */,
+				FBD4B0F629B778AF00E4A230 /* MemberAssembler.swift in Sources */,
+				FBD4B12729B785F500E4A230 /* MemberRouter.swift in Sources */,
+				FBD4B11529B7803300E4A230 /* DefaultMemberRepository.swift in Sources */,
+				FBD4B11729B7805600E4A230 /* MemberRepository.swift in Sources */,
+				FBD4B11B29B782A500E4A230 /* MainAssembler.swift in Sources */,
+				FBD4B10C29B77C3E00E4A230 /* MemberEntity.swift in Sources */,
+				FBD4B11129B77EFE00E4A230 /* DataProvider.swift in Sources */,
+				FBD4B11329B77F4B00E4A230 /* JSONLoader.swift in Sources */,
+				FBD4B0F429B7787000E4A230 /* AppAssembler.swift in Sources */,
 				FBD4B0DB29B71A6900E4A230 /* RealmSwiftUIApp.swift in Sources */,
+				FBD4B12D29B78B0C00E4A230 /* ViewState.swift in Sources */,
+				FBD4B10A29B77B4600E4A230 /* Member.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
