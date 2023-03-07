@@ -6,12 +6,24 @@
 //
 
 import SwiftUI
+import RealmSwift
 
+let app: RealmSwift.App? = nil
 @main
-struct RealmSwiftUIApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+struct RealmSwiftUIApp: SwiftUI.App {
+  @ObservedResults(Group.self) var groups
+  var body: some Scene {
+    WindowGroup {
+      if let group = groups.first {
+        NavigationView {
+          ContentView(group: group)
         }
+      } else {
+        ProgressView()
+          .onAppear {
+            $groups.append(Group())
+          }
+      }
     }
+  }
 }
