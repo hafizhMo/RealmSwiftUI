@@ -13,15 +13,11 @@ struct MemberScreen: View {
   
   var body: some View {
     VStack {
-      HStack {
-        Image(systemName: "leaf.fill")
-          .foregroundColor(.green)
-        Text("SwiftUI Realm Test")
-      }
-      
       if let data = viewModel.members.value {
-        ForEach(Array(data.enumerated()), id: \.offset) { _, member in
-          Text(member.stageName)
+        List {
+          ForEach(Array(data.enumerated()), id: \.offset) { _, member in
+            MemberRow(member: member)
+          }
         }
       }
     }

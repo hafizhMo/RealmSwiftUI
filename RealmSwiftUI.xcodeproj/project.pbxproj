@@ -28,6 +28,7 @@
 		FBD4B12729B785F500E4A230 /* MemberRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B12629B785F500E4A230 /* MemberRouter.swift */; };
 		FBD4B12A29B7873B00E4A230 /* member.json in Resources */ = {isa = PBXBuildFile; fileRef = FBD4B12929B7873B00E4A230 /* member.json */; };
 		FBD4B12D29B78B0C00E4A230 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B12C29B78B0C00E4A230 /* ViewState.swift */; };
+		FBF1EA9729B7C1A100F140D0 /* MemberRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1EA9629B7C1A100F140D0 /* MemberRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		FBD4B12629B785F500E4A230 /* MemberRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRouter.swift; sourceTree = "<group>"; };
 		FBD4B12929B7873B00E4A230 /* member.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = member.json; sourceTree = "<group>"; };
 		FBD4B12C29B78B0C00E4A230 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		FBF1EA9629B7C1A100F140D0 /* MemberRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +275,7 @@
 		FBD4B12029B784AC00E4A230 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				FBF1EA9629B7C1A100F140D0 /* MemberRow.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				FBD4B12329B7851100E4A230 /* MemberViewModel.swift in Sources */,
 				FBD4B11D29B7837400E4A230 /* CustomError.swift in Sources */,
 				FBD4B0F629B778AF00E4A230 /* MemberAssembler.swift in Sources */,
+				FBF1EA9729B7C1A100F140D0 /* MemberRow.swift in Sources */,
 				FBD4B12729B785F500E4A230 /* MemberRouter.swift in Sources */,
 				FBD4B11529B7803300E4A230 /* DefaultMemberRepository.swift in Sources */,
 				FBD4B11729B7805600E4A230 /* MemberRepository.swift in Sources */,
