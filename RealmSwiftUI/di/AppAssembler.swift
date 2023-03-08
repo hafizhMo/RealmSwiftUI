@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Assembler: MemberAssembler,
+protocol Assembler: MemberAssembler, OnBoardingAssembler,
                     MainAssembler {}
 
 class AppAssembler: Assembler {}

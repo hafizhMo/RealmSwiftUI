@@ -14,7 +14,7 @@ struct RealmSwiftUIApp: App {
   var body: some Scene {
     WindowGroup {
       NavigationView {
-        MemberScreen(viewModel: assembler.resolve())
+        LoadingScreen(viewModel: assembler.resolve(), router: assembler.resolve())
       }
     }
   }

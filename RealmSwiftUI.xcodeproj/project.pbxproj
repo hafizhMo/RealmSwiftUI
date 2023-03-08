@@ -29,6 +29,12 @@
 		FBD4B12A29B7873B00E4A230 /* member.json in Resources */ = {isa = PBXBuildFile; fileRef = FBD4B12929B7873B00E4A230 /* member.json */; };
 		FBD4B12D29B78B0C00E4A230 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B12C29B78B0C00E4A230 /* ViewState.swift */; };
 		FBF1EA9729B7C1A100F140D0 /* MemberRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1EA9629B7C1A100F140D0 /* MemberRow.swift */; };
+		FBF1EAB829B8BD1E00F140D0 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1EAB729B8BD1E00F140D0 /* LoadingScreen.swift */; };
+		FBF1EABA29B8BEE600F140D0 /* OnBoardingRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1EAB929B8BEE600F140D0 /* OnBoardingRouter.swift */; };
+		FBF1EABC29B8C24600F140D0 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1EABB29B8C24600F140D0 /* LoadingViewModel.swift */; };
+		FBF1EABE29B8C28B00F140D0 /* OnBoardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1EABD29B8C28B00F140D0 /* OnBoardingAssembler.swift */; };
+		FBF1EAC029B8C41300F140D0 /* NavigationLinkModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1EABF29B8C41300F140D0 /* NavigationLinkModifier.swift */; };
+		FBF1EAC229B8F60F00F140D0 /* LoadingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF1EAC129B8F60F00F140D0 /* LoadingRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +60,12 @@
 		FBD4B12929B7873B00E4A230 /* member.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = member.json; sourceTree = "<group>"; };
 		FBD4B12C29B78B0C00E4A230 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		FBF1EA9629B7C1A100F140D0 /* MemberRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRow.swift; sourceTree = "<group>"; };
+		FBF1EAB729B8BD1E00F140D0 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
+		FBF1EAB929B8BEE600F140D0 /* OnBoardingRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingRouter.swift; sourceTree = "<group>"; };
+		FBF1EABB29B8C24600F140D0 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
+		FBF1EABD29B8C28B00F140D0 /* OnBoardingAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingAssembler.swift; sourceTree = "<group>"; };
+		FBF1EABF29B8C41300F140D0 /* NavigationLinkModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkModifier.swift; sourceTree = "<group>"; };
+		FBF1EAC129B8F60F00F140D0 /* LoadingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +129,7 @@
 			children = (
 				FBD4B11A29B782A500E4A230 /* MainAssembler.swift */,
 				FBD4B0F529B778AF00E4A230 /* MemberAssembler.swift */,
+				FBF1EABD29B8C28B00F140D0 /* OnBoardingAssembler.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -144,6 +157,7 @@
 		FBD4B0FA29B779BB00E4A230 /* features */ = {
 			isa = PBXGroup;
 			children = (
+				FBF1EAB229B8BC0500F140D0 /* onboarding */,
 				FBD4B0FE29B77A6500E4A230 /* member */,
 			);
 			path = features;
@@ -300,8 +314,52 @@
 			isa = PBXGroup;
 			children = (
 				FBD4B12C29B78B0C00E4A230 /* ViewState.swift */,
+				FBF1EABF29B8C41300F140D0 /* NavigationLinkModifier.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		FBF1EAB229B8BC0500F140D0 /* onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FBF1EAB329B8BC6000F140D0 /* router */,
+				FBF1EAB429B8BC6700F140D0 /* screen */,
+				FBF1EAB629B8BC7400F140D0 /* viewmodel */,
+				FBF1EAB529B8BC6C00F140D0 /* views */,
+			);
+			path = onboarding;
+			sourceTree = "<group>";
+		};
+		FBF1EAB329B8BC6000F140D0 /* router */ = {
+			isa = PBXGroup;
+			children = (
+				FBF1EAB929B8BEE600F140D0 /* OnBoardingRouter.swift */,
+			);
+			path = router;
+			sourceTree = "<group>";
+		};
+		FBF1EAB429B8BC6700F140D0 /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				FBF1EAB729B8BD1E00F140D0 /* LoadingScreen.swift */,
+			);
+			path = screen;
+			sourceTree = "<group>";
+		};
+		FBF1EAB529B8BC6C00F140D0 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				FBF1EAC129B8F60F00F140D0 /* LoadingRow.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		FBF1EAB629B8BC7400F140D0 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				FBF1EABB29B8C24600F140D0 /* LoadingViewModel.swift */,
+			);
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,19 +444,25 @@
 				FBD4B12529B7857600E4A230 /* MemberScreen.swift in Sources */,
 				FBD4B12329B7851100E4A230 /* MemberViewModel.swift in Sources */,
 				FBD4B11D29B7837400E4A230 /* CustomError.swift in Sources */,
+				FBF1EABA29B8BEE600F140D0 /* OnBoardingRouter.swift in Sources */,
 				FBD4B0F629B778AF00E4A230 /* MemberAssembler.swift in Sources */,
 				FBF1EA9729B7C1A100F140D0 /* MemberRow.swift in Sources */,
 				FBD4B12729B785F500E4A230 /* MemberRouter.swift in Sources */,
 				FBD4B11529B7803300E4A230 /* DefaultMemberRepository.swift in Sources */,
+				FBF1EAC029B8C41300F140D0 /* NavigationLinkModifier.swift in Sources */,
 				FBD4B11729B7805600E4A230 /* MemberRepository.swift in Sources */,
+				FBF1EABC29B8C24600F140D0 /* LoadingViewModel.swift in Sources */,
 				FBD4B11B29B782A500E4A230 /* MainAssembler.swift in Sources */,
 				FBD4B10C29B77C3E00E4A230 /* MemberEntity.swift in Sources */,
 				FBD4B11129B77EFE00E4A230 /* DataProvider.swift in Sources */,
 				FBD4B11329B77F4B00E4A230 /* JSONLoader.swift in Sources */,
+				FBF1EAC229B8F60F00F140D0 /* LoadingRow.swift in Sources */,
 				FBD4B0F429B7787000E4A230 /* AppAssembler.swift in Sources */,
+				FBF1EABE29B8C28B00F140D0 /* OnBoardingAssembler.swift in Sources */,
 				FBD4B0DB29B71A6900E4A230 /* RealmSwiftUIApp.swift in Sources */,
 				FBD4B12D29B78B0C00E4A230 /* ViewState.swift in Sources */,
 				FBD4B10A29B77B4600E4A230 /* Member.swift in Sources */,
+				FBF1EAB829B8BD1E00F140D0 /* LoadingScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
