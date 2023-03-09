@@ -9,29 +9,33 @@ import SwiftUI
 import RealmSwift
 
 struct ContentView: View {
-  @ObservedRealmObject var group: Group
+  
+  @ObservedObject var viewModel = MemberViewModel()
   
   var body: some View {
     VStack {
-      if group.items.count == 0 {
+      if let data = viewModel.members.value, data.count != 0 {
+        List {
+          ForEach(data) { member in
+            cell(member: member)
+          }
+        }
+        
+      } else {
         Text("Tap **+** to add new Items")
           .font(.caption)
           .foregroundColor(.gray)
-      } else {
-        List {
-          ForEach(group.items) { item in
-            cell(item: item)
-          }
-          .onDelete(perform: $group.items.remove)
-          .onMove(perform: $group.items.move)
-        }
       }
+    }
+    .onAppear {
+      viewModel.loadMember()
     }
     .navigationTitle("Items")
     .toolbar {
       ToolbarItem(placement: .primaryAction) {
         HStack {
           addButton()
+          deleteButton()
         }
       }
     }
@@ -39,20 +43,32 @@ struct ContentView: View {
 }
 
 extension ContentView {
-  func cell(item: Item) -> some View {
+  func cell(member: Member) -> some View {
     NavigationLink {
-      DetailView(item: item)
+      DetailView(member: member)
     } label: {
-      Text(item.name)
+      VStack(alignment: .leading, spacing: 4) {
+        Text(member.name)
+        Text(member.zodiacSign)
+          .font(.caption)
+          .foregroundColor(.gray)
+      }
     }
   }
 
   func addButton() -> some View {
     Button {
-      $group.items.append(Item())
+      viewModel.uploadMember()
     } label: {
       Image(systemName: "plus")
     }
-
+  }
+  
+  func deleteButton() -> some View {
+    Button {
+      viewModel.removeMember()
+    } label: {
+      Image(systemName: "trash")
+    }
   }
 }
