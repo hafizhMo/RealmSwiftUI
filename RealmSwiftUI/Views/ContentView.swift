@@ -10,7 +10,7 @@ import RealmSwift
 
 struct ContentView: View {
   
-  @ObservedObject var viewModel = MemberViewModel()
+  @ObservedObject var viewModel: MemberViewModel
   
   var body: some View {
     VStack {

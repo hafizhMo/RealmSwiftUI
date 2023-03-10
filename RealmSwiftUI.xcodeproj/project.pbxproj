@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB2F4DFE29BAE4260073A3B5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F4DFD29BAE4260073A3B5 /* LoadingView.swift */; };
 		FB7B551529B9CB330092B2AF /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B551429B9CB330092B2AF /* Member.swift */; };
 		FB7B551829B9E07E0092B2AF /* MemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7B551729B9E07E0092B2AF /* MemberViewModel.swift */; };
 		FBD4B0DB29B71A6900E4A230 /* RealmSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD4B0DA29B71A6900E4A230 /* RealmSwiftUIApp.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB2F4DFD29BAE4260073A3B5 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		FB7B551429B9CB330092B2AF /* Member.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
 		FB7B551729B9E07E0092B2AF /* MemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberViewModel.swift; sourceTree = "<group>"; };
 		FBD4B0D729B71A6900E4A230 /* RealmSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealmSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,6 +42,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB2F4DFC29BAE4140073A3B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FBD4B0DC29B71A6900E4A230 /* ContentView.swift */,
+				FBD4B0F029B7281E00E4A230 /* DetailView.swift */,
+				FB2F4DFD29BAE4260073A3B5 /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FB7B551629B9E05C0092B2AF /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,13 +79,12 @@
 		FBD4B0D929B71A6900E4A230 /* RealmSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				FB7B551629B9E05C0092B2AF /* ViewModel */,
-				FBD4B0DC29B71A6900E4A230 /* ContentView.swift */,
-				FBD4B0F029B7281E00E4A230 /* DetailView.swift */,
 				FBD4B0DA29B71A6900E4A230 /* RealmSwiftUIApp.swift */,
 				FBD4B0DE29B71A6A00E4A230 /* Assets.xcassets */,
 				FBD4B0EB29B7227300E4A230 /* Models */,
 				FBD4B0E029B71A6A00E4A230 /* Preview Content */,
+				FB7B551629B9E05C0092B2AF /* ViewModel */,
+				FB2F4DFC29BAE4140073A3B5 /* Views */,
 			);
 			path = RealmSwiftUI;
 			sourceTree = "<group>";
@@ -175,6 +186,7 @@
 				FBD4B0DD29B71A6900E4A230 /* ContentView.swift in Sources */,
 				FBD4B0F129B7281E00E4A230 /* DetailView.swift in Sources */,
 				FBD4B0DB29B71A6900E4A230 /* RealmSwiftUIApp.swift in Sources */,
+				FB2F4DFE29BAE4260073A3B5 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

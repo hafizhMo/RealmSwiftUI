@@ -48,11 +48,14 @@ final class MemberViewModel: ObservableObject {
       .receive(on: DispatchQueue.main)
       .sink { completion in
       switch completion {
-      case .finished: ()
+      case .finished:
+        print("finished...")
       case .failure(let error):
+        print("failure")
         self.isAdded = .error(error: error)
       }
     } receiveValue: { value in
+      print("receiveValue...")
       self.isAdded = .success(data: value)
       if value {
         self.loadMember()
@@ -66,12 +69,15 @@ final class MemberViewModel: ObservableObject {
       .receive(on: DispatchQueue.main)
       .sink { completion in
         switch completion {
-        case .finished: ()
+        case .finished:
+          print("finished...")
         case .failure(let error):
+          print("failure...")
           self.isDeleted = .error(error: error)
         }
       } receiveValue: { value in
         self.isDeleted = .success(data: value)
+        print("receiveValue...")
         if value {
           self.loadMember()
         }
