@@ -43,7 +43,8 @@ struct LoadingView: View {
       
     }
     .onAppear {
-      viewModel.uploadMember()
+//      viewModel.uploadMember()
+      viewModel.uploadMemberJSON()
     }
     .padding()
     .navigationDestination(isPresented: $willMoveToNextScreen, destination: {

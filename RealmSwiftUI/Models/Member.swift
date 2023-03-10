@@ -7,7 +7,7 @@
 
 import RealmSwift
 
-class Member: Object, ObjectKeyIdentifiable {
+class Member: Object, ObjectKeyIdentifiable, Codable {
   @Persisted(primaryKey: true) var id: ObjectId
   @Persisted var name: String
   @Persisted var zodiacSign: String
@@ -16,5 +16,10 @@ class Member: Object, ObjectKeyIdentifiable {
     self.init()
     self.name = name
     self.zodiacSign = zodiacSign
+  }
+  
+  enum CodingKeys: String, CodingKey {
+    case name = "name"
+    case zodiacSign = "zodiac_sign"
   }
 }
