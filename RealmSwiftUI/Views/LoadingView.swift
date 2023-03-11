@@ -38,12 +38,12 @@ struct LoadingView: View {
           
           if let status = viewModel.isAdded.value, status, downloadAmount == 100 {
             willMoveToNextScreen = true
+            PrefHelper.saveBool(key: .isFirstOpenApp, value: true)
           }
         }
       
     }
     .onAppear {
-//      viewModel.uploadMember()
       viewModel.uploadMemberJSON()
     }
     .padding()

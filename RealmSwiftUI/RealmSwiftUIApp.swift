@@ -13,7 +13,11 @@ struct RealmSwiftUIApp: App {
   var body: some Scene {
     WindowGroup {
         NavigationStack {
-          LoadingView()
+          if PrefHelper.getIsFirstOpenApp() {
+            LoadingView()
+          } else {
+            ContentView(viewModel: MemberViewModel())
+          }
         }
     }
   }
