@@ -16,7 +16,7 @@ struct RealmSwiftUIApp: App {
           if PrefHelper.getIsFirstOpenApp() {
             LoadingView()
           } else {
-            ContentView(viewModel: MemberViewModel())
+            ContentView(viewModel: AlbumViewModel())
           }
         }
     }

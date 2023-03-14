@@ -1,0 +1,92 @@
+[
+  {
+    "title": "I Love",
+    "songs": [
+      {
+        "title": "Nxde",
+        "duration": "2:59"
+      },
+      {
+        "title": "Reset",
+        "duration": "3:03"
+      },
+      {
+        "title": "LOVE",
+        "duration": "3:17"
+      }
+    ],
+    "release_year": "2022"
+  },
+  {
+    "title": "I Burn",
+    "songs": [
+      {
+        "title": "Where is love",
+        "duration": "2:58"
+      },
+      {
+        "title": "HANN",
+        "duration": "2:56"
+      },
+      {
+        "title": "MOON",
+        "duration": "3:21"
+      },
+      {
+        "title": "HWA",
+        "duration": "3:18"
+      },
+      {
+        "title": "LOST",
+        "duration": "3:02"
+      }
+    ],
+    "release_year": "2021"
+  },
+  {
+    "title": "DUMDi DUMDi",
+    "songs": [
+      {
+        "title": "DUMDi DUMDi",
+        "duration": "3:31"
+      },
+      {
+        "title": "i’M THE TREND",
+        "duration": "3:25"
+      }
+    ],
+    "release_year": "2020"
+  },
+  {
+    "title": "LATATA",
+    "songs": [
+      {
+        "title": "LATATA",
+        "duration": "3:23"
+      },
+      {
+        "title": "MAZE",
+        "duration": "3:21"
+      }
+    ],
+    "release_year": "2019"
+  },
+  {
+    "title": "I Am",
+    "songs": [
+      {
+        "title": "DON'T TEXT ME",
+        "duration": "3:36"
+      },
+      {
+        "title": "What’s in your house?",
+        "duration": "3:27"
+      },
+      {
+        "title": "Hear me",
+        "duration": "3:57"
+      }
+    ],
+    "release_year": "2018"
+  }
+]

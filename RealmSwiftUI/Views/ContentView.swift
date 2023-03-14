@@ -10,15 +10,15 @@ import RealmSwift
 
 struct ContentView: View {
   
-  @ObservedObject var viewModel: MemberViewModel
-  @AppStorage(PrefsKey.lastRead.rawValue) var lastRead: Int = 0
+  @ObservedObject var viewModel: AlbumViewModel
+  @AppStorage(PrefsKey.lastRead.rawValue) var lastRead: Int = PrefHelper.getLastRead()
   
   var body: some View {
     VStack {
-      if let data = viewModel.members.value, data.count != 0 {
+      if let data = viewModel.albums.value, data.count != 0 {
         List {
-          ForEach(data) { member in
-            CellView(member: member)
+          ForEach(Array(data.enumerated()), id: \.offset) { _, album in
+            CellView(member: album)
           }
         }
         
@@ -29,7 +29,7 @@ struct ContentView: View {
       }
     }
     .onAppear {
-      viewModel.loadMember()
+      viewModel.loadAlbum()
     }
     .navigationTitle(String(lastRead))
     .toolbar {
@@ -44,21 +44,18 @@ struct ContentView: View {
 }
 
 struct CellView: View {
-  var member: Member
-  @AppStorage(PrefsKey.fontSize.rawValue) var fontSize: Int = 16
+  var member: Album
+  @AppStorage(PrefsKey.fontSize.rawValue) var fontSize: Double = PrefHelper.getFontSize()
   
   var body: some View {
     Button {
-      //      DetailView(member: member)
-      //        .onAppear {
-      PrefHelper.saveInt(key: .fontSize, value: 20)
-      PrefHelper.saveInt(key: .lastRead, value: Int(member.id))
-      //        }
+      PrefHelper.saveDouble(key: .fontSize, value: 20)
+//      PrefHelper.saveInt(key: .lastRead, value: Int(member.id))
     } label: {
       VStack(alignment: .leading, spacing: 4) {
-        Text(member.name)
-          .font(.system(size: CGFloat(fontSize)))
-        Text(member.zodiacSign)
+        Text(member.title)
+          .font(.system(size: fontSize))
+        Text(member.releaseYear)
           .font(.caption)
           .foregroundColor(.gray)
       }
@@ -70,7 +67,7 @@ extension ContentView {
   
   func addButton() -> some View {
     Button {
-      viewModel.uploadMember()
+//      viewModel.uploadMember()
     } label: {
       Image(systemName: "plus")
     }
@@ -78,7 +75,7 @@ extension ContentView {
   
   func deleteButton() -> some View {
     Button {
-      viewModel.removeMember()
+//      viewModel.removeMember()
     } label: {
       Image(systemName: "trash")
     }

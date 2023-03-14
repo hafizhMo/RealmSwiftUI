@@ -25,6 +25,15 @@ struct PrefHelper {
     return pref.integer(forKey: key.rawValue)
   }
   
+  static func saveDouble(key: PrefsKey, value: Double) {
+    pref.set(value, forKey: key.rawValue)
+    commit()
+  }
+  
+  static func getDouble(key: PrefsKey) -> Double {
+    return pref.double(forKey: key.rawValue)
+  }
+  
   static func saveBool(key: PrefsKey, value: Bool) {
     pref.set(value, forKey: key.rawValue)
     commit()
@@ -46,9 +55,9 @@ struct PrefHelper {
     return lastRead
   }
   
-  static func getFontSize() -> Int {
-    let fontSize = getInt(key: .fontSize)
-    return fontSize == 0 ? 16 : fontSize
+  static func getFontSize() -> Double {
+    let fontSize = getDouble(key: .fontSize)
+    return fontSize == 0 ? 16.0 : fontSize
   }
   
   static func getIsFirstOpenApp() -> Bool {

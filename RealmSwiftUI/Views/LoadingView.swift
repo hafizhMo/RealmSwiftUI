@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LoadingView: View {
   
-  @ObservedObject var viewModel = MemberViewModel()
+  @ObservedObject var viewModel = AlbumViewModel()
   @State private var willMoveToNextScreen = false
   @State private var downloadAmount = 0.0
   private let timer = Timer.publish(every: 0.02, on: .main, in: .common).autoconnect()
@@ -25,8 +25,8 @@ struct LoadingView: View {
           .opacity(viewModel.isAdded.value ?? false ? 0 : 1)
         
         if viewModel.isAdded.value ?? false {
-            Image(systemName: "checkmark")
-              .foregroundColor(.accentColor)
+          Image(systemName: "checkmark")
+            .foregroundColor(.accentColor)
         }
       }
       
@@ -37,14 +37,15 @@ struct LoadingView: View {
           }
           
           if let status = viewModel.isAdded.value, status, downloadAmount == 100 {
-            willMoveToNextScreen = true
+            //            willMoveToNextScreen = true
             PrefHelper.saveBool(key: .isFirstOpenApp, value: true)
           }
         }
       
     }
     .onAppear {
-      viewModel.uploadMemberJSON()
+      viewModel.uploadAlbumJSON()
+      viewModel.loadAlbum()
     }
     .padding()
     .navigationDestination(isPresented: $willMoveToNextScreen, destination: {
