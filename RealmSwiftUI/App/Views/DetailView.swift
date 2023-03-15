@@ -9,16 +9,16 @@ import SwiftUI
 import RealmSwift
 
 struct DetailView: View {
-  @ObservedRealmObject var member: Member
+//  @ObservedRealmObject var member: Member
   
   var body: some View {
     ScrollView {
       Text("Edit Name")
         .font(.caption)
         .foregroundColor(.gray)
-      TextField("New Name", text: $member.name)
+//      TextField("New Name", text: $member.name)
     }
     .padding()
-    .navigationTitle(member.name)
+//    .navigationTitle(member.name)
   }
 }

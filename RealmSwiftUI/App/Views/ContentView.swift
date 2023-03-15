@@ -10,15 +10,15 @@ import RealmSwift
 
 struct ContentView: View {
   
-  @ObservedObject var viewModel: AlbumViewModel
-  @AppStorage(PrefsKey.lastRead.rawValue) var lastRead: Int = PrefHelper.getLastRead()
+  @ObservedObject var viewModel: MemberViewModel
+//  @AppStorage(PrefsKey.lastRead.rawValue) var lastRead: Int = PrefHelper.getLastRead()
   
   var body: some View {
     VStack {
-      if let data = viewModel.albums.value, data.count != 0 {
+      if let data = viewModel.members.value, data.count != 0 {
         List {
-          ForEach(Array(data.enumerated()), id: \.offset) { _, album in
-            CellView(member: album)
+          ForEach(Array(data.enumerated()), id: \.offset) { _, member in
+            CellView(member: member)
           }
         }
         
@@ -29,9 +29,9 @@ struct ContentView: View {
       }
     }
     .onAppear {
-      viewModel.loadAlbum()
+      viewModel.getMember()
     }
-    .navigationTitle(String(lastRead))
+    .navigationTitle("Member")
     .toolbar {
       ToolbarItem(placement: .primaryAction) {
         HStack {
@@ -44,18 +44,17 @@ struct ContentView: View {
 }
 
 struct CellView: View {
-  var member: Album
+  var member: Member
   @AppStorage(PrefsKey.fontSize.rawValue) var fontSize: Double = PrefHelper.getFontSize()
   
   var body: some View {
     Button {
-      PrefHelper.saveDouble(key: .fontSize, value: 20)
-//      PrefHelper.saveInt(key: .lastRead, value: Int(member.id))
+      let _ = print(member.name)
     } label: {
       VStack(alignment: .leading, spacing: 4) {
-        Text(member.title)
+        Text(member.name)
           .font(.system(size: fontSize))
-        Text(member.releaseYear)
+        Text(member.zodiacSign)
           .font(.caption)
           .foregroundColor(.gray)
       }

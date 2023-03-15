@@ -10,13 +10,15 @@ import SwiftUI
 @main
 struct RealmSwiftUIApp: App {
 
+  private let assembler = AppAssembler()
+
   var body: some Scene {
     WindowGroup {
         NavigationStack {
           if PrefHelper.getIsFirstOpenApp() {
-            LoadingView()
+            LoadingScreen(viewModel: assembler.resolve(), router: assembler.resolve())
           } else {
-            ContentView(viewModel: AlbumViewModel())
+            ContentView(viewModel: assembler.resolve())
           }
         }
     }

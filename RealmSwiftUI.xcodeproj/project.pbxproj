@@ -7,7 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FB2F4DFE29BAE4260073A3B5 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F4DFD29BAE4260073A3B5 /* LoadingView.swift */; };
+		FB18972329C15733007E2CE8 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18972229C15733007E2CE8 /* AppAssembler.swift */; };
+		FB18972529C15821007E2CE8 /* MemberAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18972429C15821007E2CE8 /* MemberAssembler.swift */; };
+		FB18972729C1582B007E2CE8 /* AlbumAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18972629C1582B007E2CE8 /* AlbumAssembler.swift */; };
+		FB18972A29C15878007E2CE8 /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18972929C15878007E2CE8 /* MainAssembler.swift */; };
+		FB18973729C15B36007E2CE8 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18973629C15B36007E2CE8 /* Song.swift */; };
+		FB18973929C15B5C007E2CE8 /* SongEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18973829C15B5C007E2CE8 /* SongEntity.swift */; };
+		FB18973B29C15B90007E2CE8 /* AlbumEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18973A29C15B90007E2CE8 /* AlbumEntity.swift */; };
+		FB18973D29C15BCF007E2CE8 /* MemberEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18973C29C15BCF007E2CE8 /* MemberEntity.swift */; };
+		FB18973F29C15C1B007E2CE8 /* MemberLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18973E29C15C1B007E2CE8 /* MemberLocalDataSource.swift */; };
+		FB18974129C15D86007E2CE8 /* AlbumLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18974029C15D86007E2CE8 /* AlbumLocalDataSource.swift */; };
+		FB18974329C15DD1007E2CE8 /* DefaultMemberRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18974229C15DD1007E2CE8 /* DefaultMemberRepository.swift */; };
+		FB18974529C15E0F007E2CE8 /* MemberRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18974429C15E0F007E2CE8 /* MemberRepository.swift */; };
+		FB18974729C1604D007E2CE8 /* MemberUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18974629C1604D007E2CE8 /* MemberUseCase.swift */; };
+		FB18974B29C16661007E2CE8 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18974A29C16661007E2CE8 /* MainRouter.swift */; };
+		FB2F4DFE29BAE4260073A3B5 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F4DFD29BAE4260073A3B5 /* LoadingScreen.swift */; };
 		FB2F4E0129BB61CB0073A3B5 /* JSONLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F4E0029BB61CB0073A3B5 /* JSONLoader.swift */; };
 		FB2F4E0429BB61F30073A3B5 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F4E0329BB61F30073A3B5 /* ViewState.swift */; };
 		FB2F4E0629BB62140073A3B5 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F4E0529BB62140073A3B5 /* CustomError.swift */; };
@@ -28,7 +42,21 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FB2F4DFD29BAE4260073A3B5 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		FB18972229C15733007E2CE8 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
+		FB18972429C15821007E2CE8 /* MemberAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAssembler.swift; sourceTree = "<group>"; };
+		FB18972629C1582B007E2CE8 /* AlbumAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumAssembler.swift; sourceTree = "<group>"; };
+		FB18972929C15878007E2CE8 /* MainAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
+		FB18973629C15B36007E2CE8 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		FB18973829C15B5C007E2CE8 /* SongEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongEntity.swift; sourceTree = "<group>"; };
+		FB18973A29C15B90007E2CE8 /* AlbumEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumEntity.swift; sourceTree = "<group>"; };
+		FB18973C29C15BCF007E2CE8 /* MemberEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberEntity.swift; sourceTree = "<group>"; };
+		FB18973E29C15C1B007E2CE8 /* MemberLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberLocalDataSource.swift; sourceTree = "<group>"; };
+		FB18974029C15D86007E2CE8 /* AlbumLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumLocalDataSource.swift; sourceTree = "<group>"; };
+		FB18974229C15DD1007E2CE8 /* DefaultMemberRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMemberRepository.swift; sourceTree = "<group>"; };
+		FB18974429C15E0F007E2CE8 /* MemberRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberRepository.swift; sourceTree = "<group>"; };
+		FB18974629C1604D007E2CE8 /* MemberUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberUseCase.swift; sourceTree = "<group>"; };
+		FB18974A29C16661007E2CE8 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		FB2F4DFD29BAE4260073A3B5 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		FB2F4E0029BB61CB0073A3B5 /* JSONLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLoader.swift; sourceTree = "<group>"; };
 		FB2F4E0329BB61F30073A3B5 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		FB2F4E0529BB62140073A3B5 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
@@ -60,12 +88,131 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB18972129C1571C007E2CE8 /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				FB18972829C1582F007E2CE8 /* Features */,
+				FB18972229C15733007E2CE8 /* AppAssembler.swift */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
+		FB18972829C1582F007E2CE8 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				FB18972429C15821007E2CE8 /* MemberAssembler.swift */,
+				FB18972629C1582B007E2CE8 /* AlbumAssembler.swift */,
+				FB18972929C15878007E2CE8 /* MainAssembler.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		FB18972B29C15AD4007E2CE8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FB18972C29C15AD9007E2CE8 /* Data */,
+				FB18972D29C15AE1007E2CE8 /* Domain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FB18972C29C15AD9007E2CE8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FB18973429C15B0E007E2CE8 /* DataSource */,
+				FB18973229C15AFD007E2CE8 /* Entity */,
+				FB18973329C15B05007E2CE8 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FB18972D29C15AE1007E2CE8 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FB18972E29C15AE6007E2CE8 /* Model */,
+				FB18973029C15AF1007E2CE8 /* Repository */,
+				FB18972F29C15AEA007E2CE8 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FB18972E29C15AE6007E2CE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FB7B551429B9CB330092B2AF /* Member.swift */,
+				FB42E05D29C07B610038A2BF /* Album.swift */,
+				FB18973629C15B36007E2CE8 /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FB18972F29C15AEA007E2CE8 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				FB18974629C1604D007E2CE8 /* MemberUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		FB18973029C15AF1007E2CE8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				FB18974429C15E0F007E2CE8 /* MemberRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		FB18973229C15AFD007E2CE8 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FB18973829C15B5C007E2CE8 /* SongEntity.swift */,
+				FB18973A29C15B90007E2CE8 /* AlbumEntity.swift */,
+				FB18973C29C15BCF007E2CE8 /* MemberEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		FB18973329C15B05007E2CE8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				FB18974229C15DD1007E2CE8 /* DefaultMemberRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		FB18973429C15B0E007E2CE8 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				FB18973E29C15C1B007E2CE8 /* MemberLocalDataSource.swift */,
+				FB18974029C15D86007E2CE8 /* AlbumLocalDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		FB18974829C16632007E2CE8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FB18974929C1664C007E2CE8 /* Router */,
+				FB7B551629B9E05C0092B2AF /* ViewModel */,
+				FB2F4DFC29BAE4140073A3B5 /* Views */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FB18974929C1664C007E2CE8 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				FB18974A29C16661007E2CE8 /* MainRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		FB2F4DFC29BAE4140073A3B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				FBD4B0DC29B71A6900E4A230 /* ContentView.swift */,
 				FBD4B0F029B7281E00E4A230 /* DetailView.swift */,
-				FB2F4DFD29BAE4260073A3B5 /* LoadingView.swift */,
+				FB2F4DFD29BAE4260073A3B5 /* LoadingScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,11 +269,11 @@
 			children = (
 				FBD4B0DA29B71A6900E4A230 /* RealmSwiftUIApp.swift */,
 				FBD4B0DE29B71A6A00E4A230 /* Assets.xcassets */,
-				FBD4B0EB29B7227300E4A230 /* Models */,
+				FB18974829C16632007E2CE8 /* App */,
+				FB18972B29C15AD4007E2CE8 /* Core */,
+				FB18972129C1571C007E2CE8 /* Dependency */,
 				FBD4B0E029B71A6A00E4A230 /* Preview Content */,
 				FB2F4DFF29BB61C10073A3B5 /* Utils */,
-				FB7B551629B9E05C0092B2AF /* ViewModel */,
-				FB2F4DFC29BAE4140073A3B5 /* Views */,
 			);
 			path = RealmSwiftUI;
 			sourceTree = "<group>";
@@ -137,15 +284,6 @@
 				FBD4B0E129B71A6A00E4A230 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		FBD4B0EB29B7227300E4A230 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				FB7B551429B9CB330092B2AF /* Member.swift */,
-				FB42E05D29C07B610038A2BF /* Album.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,18 +364,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB18973729C15B36007E2CE8 /* Song.swift in Sources */,
 				FB7B551529B9CB330092B2AF /* Member.swift in Sources */,
+				FB18974129C15D86007E2CE8 /* AlbumLocalDataSource.swift in Sources */,
 				FB7B551829B9E07E0092B2AF /* MemberViewModel.swift in Sources */,
 				FB2F4E0929BB624B0073A3B5 /* DataProvider.swift in Sources */,
+				FB18974329C15DD1007E2CE8 /* DefaultMemberRepository.swift in Sources */,
+				FB18972529C15821007E2CE8 /* MemberAssembler.swift in Sources */,
 				FBD4B0DD29B71A6900E4A230 /* ContentView.swift in Sources */,
 				FBD4B0F129B7281E00E4A230 /* DetailView.swift in Sources */,
+				FB18973929C15B5C007E2CE8 /* SongEntity.swift in Sources */,
+				FB18972A29C15878007E2CE8 /* MainAssembler.swift in Sources */,
 				FB2F4E0D29BC5B2F0073A3B5 /* PrefHelper.swift in Sources */,
 				FBD4B0DB29B71A6900E4A230 /* RealmSwiftUIApp.swift in Sources */,
 				FB2F4E0629BB62140073A3B5 /* CustomError.swift in Sources */,
 				FB42E06029C07E530038A2BF /* AlbumViewModel.swift in Sources */,
-				FB2F4DFE29BAE4260073A3B5 /* LoadingView.swift in Sources */,
+				FB2F4DFE29BAE4260073A3B5 /* LoadingScreen.swift in Sources */,
+				FB18972329C15733007E2CE8 /* AppAssembler.swift in Sources */,
 				FB2F4E0429BB61F30073A3B5 /* ViewState.swift in Sources */,
+				FB18973D29C15BCF007E2CE8 /* MemberEntity.swift in Sources */,
 				FB2F4E0129BB61CB0073A3B5 /* JSONLoader.swift in Sources */,
+				FB18973F29C15C1B007E2CE8 /* MemberLocalDataSource.swift in Sources */,
+				FB18974729C1604D007E2CE8 /* MemberUseCase.swift in Sources */,
+				FB18972729C1582B007E2CE8 /* AlbumAssembler.swift in Sources */,
+				FB18973B29C15B90007E2CE8 /* AlbumEntity.swift in Sources */,
+				FB18974529C15E0F007E2CE8 /* MemberRepository.swift in Sources */,
+				FB18974B29C16661007E2CE8 /* MainRouter.swift in Sources */,
 				FB42E05E29C07B610038A2BF /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

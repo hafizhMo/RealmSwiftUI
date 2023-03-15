@@ -1,13 +1,13 @@
 //
-//  Member.swift
+//  MemberEntity.swift
 //  RealmSwiftUI
 //
-//  Created by Hafizh Mo on 09/03/23.
+//  Created by Hafizh Mo on 15/03/23.
 //
 
 import RealmSwift
 
-class Member: Object, ObjectKeyIdentifiable, Codable {
+class MemberEntity: Object, Member, ObjectKeyIdentifiable, Codable {
   @Persisted(primaryKey: true) var id: ObjectId
   @Persisted var name: String
   @Persisted var zodiacSign: String
