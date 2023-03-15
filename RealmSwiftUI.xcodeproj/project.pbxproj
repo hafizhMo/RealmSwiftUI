@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0CCD9829C17ED300A515AD /* DefaultAlbumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CCD9729C17ED300A515AD /* DefaultAlbumRepository.swift */; };
+		FB0CCD9A29C17EFB00A515AD /* AlbumRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CCD9929C17EFB00A515AD /* AlbumRepository.swift */; };
+		FB0CCD9C29C17F1800A515AD /* AlbumUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0CCD9B29C17F1800A515AD /* AlbumUseCase.swift */; };
 		FB18972329C15733007E2CE8 /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18972229C15733007E2CE8 /* AppAssembler.swift */; };
 		FB18972529C15821007E2CE8 /* MemberAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18972429C15821007E2CE8 /* MemberAssembler.swift */; };
 		FB18972729C1582B007E2CE8 /* AlbumAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB18972629C1582B007E2CE8 /* AlbumAssembler.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB0CCD9729C17ED300A515AD /* DefaultAlbumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAlbumRepository.swift; sourceTree = "<group>"; };
+		FB0CCD9929C17EFB00A515AD /* AlbumRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRepository.swift; sourceTree = "<group>"; };
+		FB0CCD9B29C17F1800A515AD /* AlbumUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumUseCase.swift; sourceTree = "<group>"; };
 		FB18972229C15733007E2CE8 /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
 		FB18972429C15821007E2CE8 /* MemberAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberAssembler.swift; sourceTree = "<group>"; };
 		FB18972629C1582B007E2CE8 /* AlbumAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumAssembler.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				FB18974629C1604D007E2CE8 /* MemberUseCase.swift */,
+				FB0CCD9B29C17F1800A515AD /* AlbumUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -158,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				FB18974429C15E0F007E2CE8 /* MemberRepository.swift */,
+				FB0CCD9929C17EFB00A515AD /* AlbumRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -176,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				FB18974229C15DD1007E2CE8 /* DefaultMemberRepository.swift */,
+				FB0CCD9729C17ED300A515AD /* DefaultAlbumRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -365,6 +374,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB18973729C15B36007E2CE8 /* Song.swift in Sources */,
+				FB0CCD9829C17ED300A515AD /* DefaultAlbumRepository.swift in Sources */,
+				FB0CCD9A29C17EFB00A515AD /* AlbumRepository.swift in Sources */,
 				FB7B551529B9CB330092B2AF /* Member.swift in Sources */,
 				FB18974129C15D86007E2CE8 /* AlbumLocalDataSource.swift in Sources */,
 				FB7B551829B9E07E0092B2AF /* MemberViewModel.swift in Sources */,
@@ -377,6 +388,7 @@
 				FB18972A29C15878007E2CE8 /* MainAssembler.swift in Sources */,
 				FB2F4E0D29BC5B2F0073A3B5 /* PrefHelper.swift in Sources */,
 				FBD4B0DB29B71A6900E4A230 /* RealmSwiftUIApp.swift in Sources */,
+				FB0CCD9C29C17F1800A515AD /* AlbumUseCase.swift in Sources */,
 				FB2F4E0629BB62140073A3B5 /* CustomError.swift in Sources */,
 				FB42E06029C07E530038A2BF /* AlbumViewModel.swift in Sources */,
 				FB2F4DFE29BAE4260073A3B5 /* LoadingScreen.swift in Sources */,

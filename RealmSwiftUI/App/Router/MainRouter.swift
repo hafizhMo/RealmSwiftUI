@@ -16,6 +16,6 @@ struct MainRouter {
   }
 
   func routeContent() -> some View {
-    ContentView(viewModel: assembler.resolve())
+    ContentView(memberViewModel: assembler.resolve(), albumViewModel: assembler.resolve())
   }
 }

@@ -9,17 +9,27 @@ import SwiftUI
 
 struct LoadingScreen: View {
 
-  @ObservedObject var viewModel: MemberViewModel
+  @ObservedObject var memberViewModel: MemberViewModel
+  @ObservedObject var albumViewModel: AlbumViewModel
   let router: MainRouter
 
+  @State private var showAlbumLoading = false
   @State private var willMoveToNextScreen = false
   @State private var downloadAmount = 0.0
   private let timer = Timer.publish(every: 0.02, on: .main, in: .common).autoconnect()
 
   var body: some View {
     VStack() {
-      LoadingView(text: "Member", isDone: $viewModel.isAdded) { onFinished in
-        willMoveToNextScreen = onFinished
+      LoadingView(text: "Member", isDone: $memberViewModel.isAdded) { onFinished in
+        showAlbumLoading = true
+      }
+      
+      if showAlbumLoading {
+        LoadingView(text: "Album", isDone: $albumViewModel.isAdded) { onFinished in
+          willMoveToNextScreen = onFinished
+        }.onAppear {
+          albumViewModel.loadAlbumJSONThenInsertRealmData()
+        }
       }
     }
     .padding()
@@ -27,7 +37,7 @@ struct LoadingScreen: View {
       router.routeContent()
     })
     .onAppear {
-      viewModel.loadMemberJSONThenInsertRealmData()
+      memberViewModel.loadMemberJSONThenInsertRealmData()
     }
   }
 }

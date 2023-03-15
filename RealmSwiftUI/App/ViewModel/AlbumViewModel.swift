@@ -11,72 +11,18 @@ import RealmSwift
 
 final class AlbumViewModel: ObservableObject {
   
-  @Published var isAdded: ViewState<Bool> = .initiate
+  @Published var isAdded: Bool = false
   @Published var albums: ViewState<[Album]> = .initiate
-  @Published var albumsEntity: ViewState<[AlbumEntity]> = .initiate
   
-  private let provider = DataProvider()
+  private let albumUseCase: AlbumUseCase
   private var cancellables = Set<AnyCancellable>()
   
-  func getAlbumJSON() -> AnyPublisher<[AlbumEntity]?, Error> {
-    return JSONLoader<[AlbumEntity]>().load(fileName: "album")
-      .eraseToAnyPublisher()
+  init(albumUseCase: AlbumUseCase) {
+    self.albumUseCase = albumUseCase
   }
   
-  func uploadAlbumJSON() {
-    let result = getAlbumJSON()
-    result
-      .receive(on: DispatchQueue.main)
-      .sink { completion in
-        switch completion {
-        case .finished: ()
-        case .failure(let error):
-          self.albumsEntity = .error(error: error)
-        }
-      } receiveValue: { data in
-        guard let data = data else { return }
-        self.albumsEntity = .success(data: data)
-        self.uploadAlbum(data)
-      }
-      .store(in: &cancellables)
-    
-  }
-  
-  // MARK: - Insert to Realm
-  
-  func addAlbum(_ value: [AlbumEntity]) -> AnyPublisher<Bool, Error> {
-    return provider.add(value)
-      .eraseToAnyPublisher()
-  }
-  
-  func uploadAlbum(_ value: [AlbumEntity] = []) {
-    addAlbum(value)
-      .receive(on: DispatchQueue.main)
-      .sink { completion in
-        switch completion {
-        case .finished:
-          print("finished...")
-        case .failure(let error):
-          print("failure")
-          self.isAdded = .error(error: error)
-        }
-      } receiveValue: { value in
-        self.isAdded = .success(data: value)
-        print("receiveValue...")
-      }
-      .store(in: &cancellables)
-  }
-  
-  // MARK: - Get from Realm
-  
-  func getAlbum() -> AnyPublisher<[Album], Error> {
-    provider.objects(AlbumEntity.self)
-      .map { $0 }
-      .eraseToAnyPublisher()
-  }
-  
-  func loadAlbum() {
-    getAlbum()
+  func getAlbum() {
+    albumUseCase.getAlbum()
       .receive(on: DispatchQueue.main)
       .sink { completion in
         switch completion {
@@ -84,8 +30,43 @@ final class AlbumViewModel: ObservableObject {
         case .failure(let error):
           self.albums = .error(error: error)
         }
-      } receiveValue: { value in
-        self.albums = .success(data: value)
+      } receiveValue: { data in
+        guard let data  = data else {
+          self.albums = .error(error: NetworkError.requestError(message: "Data is nil"))
+          return
+        }
+        self.albums = .success(data: data)
+      }
+      .store(in: &cancellables)
+  }
+  
+  func loadAlbumJSONThenInsertRealmData() {
+    albumUseCase.getAlbumJSON()
+      .receive(on: DispatchQueue.main)
+      .sink { completion in
+        switch completion {
+        case .finished: ()
+        case .failure(let error):
+          print(error.localizedDescription)
+        }
+      } receiveValue: { data in
+        guard let data = data else { return }
+        self.insertAlbumToRealmData(album: data)
+      }
+      .store(in: &cancellables)
+  }
+  
+  private func insertAlbumToRealmData(album: [AlbumEntity]) {
+    albumUseCase.addAlbum(data: album)
+      .receive(on: DispatchQueue.main)
+      .sink { completion in
+        switch completion {
+        case .finished: ()
+        case .failure(let error):
+          print(error.localizedDescription)
+        }
+      } receiveValue: { data in
+        self.isAdded = data
       }
       .store(in: &cancellables)
   }

@@ -16,9 +16,9 @@ struct RealmSwiftUIApp: App {
     WindowGroup {
         NavigationStack {
           if PrefHelper.getIsFirstOpenApp() {
-            LoadingScreen(viewModel: assembler.resolve(), router: assembler.resolve())
+            LoadingScreen(memberViewModel: assembler.resolve(), albumViewModel: assembler.resolve(), router: assembler.resolve())
           } else {
-            ContentView(viewModel: assembler.resolve())
+            ContentView(memberViewModel: assembler.resolve(), albumViewModel: assembler.resolve())
           }
         }
     }
